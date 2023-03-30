@@ -1,0 +1,136 @@
+@import '@/styles/mixins';
+
+.app__container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(245, 245, 245);
+
+  // flexbox
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__header {
+    width: 1200px;
+    min-height: 200px;
+    border: 3px solid blue;
+    background-color: none;
+
+    // flexbox
+    display: flex;
+    justify-content: space-between;
+
+    &__logo, &__button {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+
+  &__upload {
+    min-height: 100px;
+    width: 1200px;
+    border: 2px solid red;
+    padding: 10px;
+
+    // flexbox
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    > span {
+      font-family: 'Courier New', monospace;
+      font-size: 1.5em;
+    }
+
+    &__button {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      @include hover;
+
+      > input {
+        display: none;
+      }
+
+      > img {
+        height: 75%;
+        width: 75%;
+        filter: opacity(60%);
+      }
+
+    }
+  }
+
+  &__main {
+    width: 1200px;
+    border: 2px solid orange;
+    overflow-y: scroll;
+
+    // flexbox
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center; 
+
+    &__basisBubble {
+      background-color: rgb(128, 128, 128, 0.2);
+      border-radius: 15px;
+      font-family: 'Courier New', monospace;
+      padding: 1px 10px 1px 10px;
+    }
+
+    &__profitBubble {
+      background-color: rgb(0, 256, 0, 0.6);
+      border-radius: 15px;
+      margin-bottom: 25px;
+      font-family: 'Courier New', monospace;
+      font-size: 1.1em;
+      padding: 1px 10px 1px 10px;
+    }
+
+    &__lossBubble {
+      background-color: rgb(256, 0, 0, 0.6);
+      border-radius: 15px;
+      margin-bottom: 25px;
+      font-family: 'Courier New', monospace;
+      font-size: 1.1em;
+      padding: 1px 10px 1px 10px;
+    }
+  }
+
+  &__download {
+    min-height: 100px;
+    width: 1200px;
+    border: 2px solid green;
+    padding: 10px;
+
+    // flexbox
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &_button {
+      > button {
+        @include hover;
+        height: 60px;
+        border-radius: 10px;
+        margin-right: 5vw;
+        min-width: 5vw;
+        font-size: 1.5em;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-family: 'Courier New', monospace;
+      }
+
+    }
+  }
+}
+
+#fontLighter {
+  font-weight: lighter;
+}
+#fontBold {
+  font-weight: bold;
+}
