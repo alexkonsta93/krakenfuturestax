@@ -558,8 +558,6 @@ $t	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof glob
 @typescript-eslint/typescript-estree	package-lock.json	/^        "@typescript-eslint\/typescript-estree": "5.53.0",$/;"	s	object:packages.node_modules/@typescript-eslint/parser.dependencies
 @typescript-eslint/visitor-keys	package-lock.json	/^        "@typescript-eslint\/visitor-keys": "5.53.0"$/;"	s	object:packages.node_modules/@typescript-eslint/scope-manager.dependencies
 @typescript-eslint/visitor-keys	package-lock.json	/^        "@typescript-eslint\/visitor-keys": "5.53.0",$/;"	s	object:packages.node_modules/@typescript-eslint/typescript-estree.dependencies
-ADD_POSITIONS	types.ts	/^  ADD_POSITIONS = 'ADD_POSITIONS',$/;"	e	enum:ActionType
-ActionType	types.ts	/^export enum ActionType {$/;"	g
 Ae	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"u/;"	v
 Al	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"u/;"	f
 AnonymousFunction017204400100	.next/static/chunks/app/head.js	/^\/***\/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {$/;"	f
@@ -1624,10 +1622,8 @@ Bl	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof glob
 C	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"u/;"	f
 C	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"u/;"	v
 D	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"u/;"	v
-DELETE_ALL_POSITIONS	types.ts	/^  DELETE_ALL_POSITIONS = 'DELETE_ALL_POSITIONS'$/;"	e	enum:ActionType
 Data	pages/api/hello.ts	/^type Data = {$/;"	a
 DeleteButton	app/Upload.tsx	/^const DeleteButton = function({$/;"	C
-Deploy on Vercel	README.md	/^## Deploy on Vercel$/;"	s
 Diff	.next/types/app/layout.ts	/^type Diff<Base, T extends Base, Message extends string = ''> = 0 extends (1 & T) ? {} : OmitWith/;"	a
 Diff	.next/types/app/page.ts	/^type Diff<Base, T extends Base, Message extends string = ''> = 0 extends (1 & T) ? {} : OmitWith/;"	a
 Download	app/Download.tsx	/^const Download = function({$/;"	C
@@ -1638,7 +1634,6 @@ F	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof globa
 FirstArg	.next/types/app/layout.ts	/^type FirstArg<T extends Function> = T extends (...args: [infer T, any]) => any ? unknown extends/;"	a
 FirstArg	.next/types/app/page.ts	/^type FirstArg<T extends Function> = T extends (...args: [infer T, any]) => any ? unknown extends/;"	a
 G	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"u/;"	f
-Getting Started	README.md	/^## Getting Started$/;"	s
 Hc	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"u/;"	c
 Head	app/head.tsx	/^export default function Head() {$/;"	f
 Header	app/Header.tsx	/^const Header = function({$/;"	C
@@ -1649,7 +1644,6 @@ Jt	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof glob
 KrakenFuturesAdapter	app/KrakenFuturesAdapter.ts	/^export default class KrakenFuturesAdapter {$/;"	c
 LayoutProps	.next/types/app/layout.ts	/^export interface LayoutProps {$/;"	i
 LayoutProps	.next/types/app/page.ts	/^export interface LayoutProps {$/;"	i
-Learn More	README.md	/^## Learn More$/;"	s
 Line	app/KrakenFuturesAdapter.ts	/^interface Line {$/;"	i
 LineRouter	app/KrakenFuturesAdapter.ts	/^class LineRouter {$/;"	c
 Ll	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"u/;"	f
@@ -1682,7 +1676,6 @@ PageProps	.next/types/app/layout.ts	/^export interface PageProps {$/;"	i
 PageProps	.next/types/app/page.ts	/^export interface PageProps {$/;"	i
 Pl	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"u/;"	f
 Position	app/KrakenFuturesAdapter.ts	/^export class Position {$/;"	c
-PositionAction	types.ts	/^export type PositionAction = {$/;"	a
 PositionObject	app/Download.tsx	/^type PositionObject = {$/;"	a
 ProfitBubble	app/Main.tsx	/^const ProfitBubble = function({$/;"	C
 Q	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"u/;"	v
@@ -1701,7 +1694,6 @@ Set	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof glo
 Sl	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"u/;"	f
 SliceState	store/positionsSlice.ts	/^interface SliceState {$/;"	i
 St	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"u/;"	c
-State	types.ts	/^export type State = {$/;"	a
 TEntry	.next/types/app/layout.ts	/^type TEntry = typeof entry$/;"	a
 TEntry	.next/types/app/page.ts	/^type TEntry = typeof entry$/;"	a
 Tl	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"u/;"	c
@@ -3480,6 +3472,7 @@ jsx-ast-utils	package-lock.json	/^        "jsx-ast-utils": "^2.4.1 || ^3.0.0",$/
 jsx-ast-utils	package-lock.json	/^        "jsx-ast-utils": "^3.3.3",$/;"	s	object:packages.node_modules/eslint-plugin-jsx-a11y.dependencies
 k	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"u/;"	f
 kl	.next/static/chunks/polyfills.js	/^!function(){var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"u/;"	f
+krakenfuturestax	README.md	/^# krakenfuturestax$/;"	c
 l	.next/static/chunks/webpack.js	/^\/******\/ 		__webpack_require__.l = function(url, done, key, chunkId) {$/;"	f	function:__webpack_require__
 language-subtag-registry	package-lock.json	/^        "language-subtag-registry": "~0.3.2"$/;"	s	object:packages.node_modules/language-tags.dependencies
 language-tags	package-lock.json	/^        "language-tags": "=1.0.5",$/;"	s	object:packages.node_modules/eslint-plugin-jsx-a11y.dependencies
