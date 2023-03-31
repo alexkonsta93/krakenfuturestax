@@ -3,7 +3,7 @@
 .app__container {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(245, 245, 245);
+  background-color: turquoise;
 
   // flexbox
   display: flex;
@@ -14,25 +14,69 @@
   &__header {
     width: 1200px;
     min-height: 200px;
-    border: 3px solid blue;
     background-color: none;
+    padding: 20px;
+    background-color: white;
+    box-shadow: inset 0px 1px 10px rgba(0, 0, 0, 0.2);
 
     // flexbox
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
 
-    &__logo, &__button {
+    &__logo {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      height: 56px;
+
+      > img {
+        height: 100%; 
+        width: 100px;
+        padding: 7px;
+        filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.3));
+      }
+
+      > span {
+        font-size: 3em;
+        font-family: 'Space Mono', monospace;
+        text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    &__github {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+      
+      > button {
+        @include button;
+        display: flex;
+        height: 60px;
+        text-align: center;
+        font-size: 1.5em;
+        border-radius: 10px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+
+
+        > img {
+          height: 100%;
+          width: 30%;
+        }
+      }
     }
+
   }
 
   &__upload {
     min-height: 100px;
     width: 1200px;
-    border: 2px solid red;
     padding: 10px;
+    background-color: rgb(235, 235, 235);
 
     // flexbox
     display: flex;
@@ -42,13 +86,15 @@
     > span {
       font-family: 'Courier New', monospace;
       font-size: 1.5em;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     }
 
     &__button {
       width: 60px;
       height: 60px;
       border-radius: 10px;
-      @include hover;
+      @include button;
+      background-color: rgba(255, 141, 71, 0.4);
 
       > input {
         display: none;
@@ -65,8 +111,9 @@
 
   &__main {
     width: 1200px;
-    border: 2px solid orange;
     overflow-y: scroll;
+    background-color: white;
+    box-shadow: inset 0px 1px 10px rgba(0, 0, 0, 0.2);
 
     // flexbox
     display: flex;
@@ -79,6 +126,7 @@
       border-radius: 15px;
       font-family: 'Courier New', monospace;
       padding: 1px 10px 1px 10px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
     }
 
     &__profitBubble {
@@ -88,6 +136,8 @@
       font-family: 'Courier New', monospace;
       font-size: 1.1em;
       padding: 1px 10px 1px 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      border: none;
     }
 
     &__lossBubble {
@@ -97,14 +147,15 @@
       font-family: 'Courier New', monospace;
       font-size: 1.1em;
       padding: 1px 10px 1px 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     }
   }
 
   &__download {
     min-height: 100px;
     width: 1200px;
-    border: 2px solid green;
     padding: 10px;
+    background-color: rgb(235, 235, 235);
 
     // flexbox
     display: flex;
@@ -113,7 +164,7 @@
 
     &_button {
       > button {
-        @include hover;
+        @include button;
         height: 60px;
         border-radius: 10px;
         margin-right: 5vw;
@@ -122,6 +173,7 @@
         padding-left: 10px;
         padding-right: 10px;
         font-family: 'Courier New', monospace;
+        background-color: rgba(255, 141, 71, 0.4);
       }
 
     }
