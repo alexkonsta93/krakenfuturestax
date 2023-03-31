@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-interface Line {
+export interface Line {
   dateTime: moment.Moment,
   type: string,
   symbol: string,
@@ -18,7 +18,7 @@ interface Line {
 
 export default class KrakenFuturesAdapter {
 
-  static processCsvData(lines: Array<Line>): Array<Position> {
+  static processCsvData(lines: Line[]): Array<Position> {
     lines = lines.reverse();
     const validTypes = ['funding rate change', 'futures trade', 'futures liquidation'];
     const positions = [];

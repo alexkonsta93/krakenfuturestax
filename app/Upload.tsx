@@ -4,18 +4,16 @@ import { useState, useEffect, Dispatch, SetStateAction } from 'react';
 import Image from 'next/image';
 import uploadIcon from '@/public/upload.svg';
 import deleteIcon from '@/public/delete.svg';
-import KrakenFuturesAdapter from '@/app/KrakenFuturesAdapter';
-import Papa, { ParseResult } from 'papaparse';
+import KrakenFuturesAdapter, { Line } from '@/app/KrakenFuturesAdapter';
+import Papa, { LocalFile, ParseResult } from 'papaparse';
 import { useAppDispatch } from '@/store/store';
 import { addManyPositions, addPosition, deleteAllPositions } from '@/store/positionsSlice';
 
 
 const UploadButton = function({
-  file,
   setFile,
 } : {
-  file: Blob | null,
-  setFile: Dispatch<SetStateAction<Blob | null>>,
+  setFile: Dispatch<SetStateAction<File | null>>,
 }) {
   const [uploadBtnClicked, setUploadBtnClicked] = useState<boolean>(false);
 
@@ -54,7 +52,7 @@ const UploadButton = function({
 const DeleteButton = function({
   setFile
 } : {
-  setFile: Dispatch<SetStateAction<Blob | null>>
+  setFile: Dispatch<SetStateAction<File | null>>
 }) {
   const [deleteBtnClicked, setDeleteBtnClicked] = useState<boolean>(false);
   const dispatch = useAppDispatch();
@@ -79,12 +77,8 @@ const Upload = function({
 } : {
   className: string,
 }) {
-  const [file, setFile] = useState<Blob | null>(null);
+  const [file, setFile] = useState<File | null>(null);
   const dispatch = useAppDispatch();
-  /*
-  const selectPositions = (state : RootState) => state.positions
-  const positions = useAppSelector(selectPositions);
-  */
   useEffect(() => {
     if (file) {
       Papa.parse<Blob>(file, {
@@ -93,7 +87,7 @@ const Upload = function({
         header: true,
         complete: (results: ParseResult<Blob>) => {
           const lines = [...results.data]
-          const positions = KrakenFuturesAdapter.processCsvData(lines);
+          const positions = KrakenFuturesAdapter.processCsvData(lines as unknown as Line[]);
           dispatch(addManyPositions(positions));
         },
         error: (error: Error) => {
@@ -115,7 +109,6 @@ const Upload = function({
         />
         :
         <UploadButton
-          file={file}
           setFile={setFile}
         />
       }
